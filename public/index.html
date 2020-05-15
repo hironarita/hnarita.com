@@ -11,6 +11,14 @@
 			margin: 0;
 			padding-top: 150px;
 			color: #000;
+			min-width: 300px;
+		}
+
+		header {
+			margin: 0 0 150px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 		}
 
 		.container {
@@ -33,6 +41,58 @@
 			margin-left: 15px;
 		}
 
+		.icons-container {
+			display: flex;
+		}
+
+		.intro-text {
+			margin: 0 0 150px 0;
+			font-size: 32px;
+			line-height: 1.5625em;
+			opacity: 0.666;
+			max-width: 970px;
+			font-weight: 300;
+		}
+
+		@media all and (max-width: 425px) {
+			header {
+				display: block;
+				justify-content: center;
+			}
+
+			.avatar-container {
+				display: block;
+				text-align: center;
+			}
+
+			.avatar {
+				height: 100px;
+				width: 100px;
+			}
+
+			.icons-container {
+				margin-top: 10px;
+				justify-content: center;
+			}
+
+			.kanji {
+				display: none;
+			}
+
+			.intro-text {
+				font-size: 17px;
+			}
+		}
+
+		.fab {
+			opacity: 0.25;
+			margin-left: 15px;
+		}
+
+		.fab:hover {
+			opacity: 0.5;
+		}
+
 		h1 {
 			margin: 0 0 1px;
 			font-size: 20px;
@@ -46,7 +106,167 @@
 			font-size: 17px;
 			opacity: 0.535;
 		}
+
+		a.no-style:link {
+			text-decoration: inherit;
+			color: inherit;
+			cursor: pointer;
+		}
+
+		a.no-style:visited {
+			text-decoration: inherit;
+			color: inherit;
+			cursor: pointer;
+		}
+
+		.css-typing p {
+			border-right: .10em solid black;
+			white-space: nowrap;
+			overflow: hidden;
+			font-size: 32px;
+			line-height: 1.5625em;
+			opacity: 0.666;
+			font-weight: 300;
+			margin: 0 0 0 0;
+		}
+
+		.css-typing p:nth-child(1) {
+			width: 290px;
+			-webkit-animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
+			animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
+			-webkit-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+
+		.css-typing p:nth-child(2) {
+			width: 150px;
+			opacity: 0;
+			-webkit-animation: type2 1.5s steps(40, end), blink .5s step-end infinite alternate;
+			animation: type2 1.5s steps(40, end), blink .5s step-end infinite alternate;
+			-webkit-animation-delay: 2s;
+			animation-delay: 2s;
+			-webkit-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+
+		.css-typing p:nth-child(3) {
+			width: 320px;
+			opacity: 0;
+			-webkit-animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+			animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+			-webkit-animation-delay: 3.5s;
+			animation-delay: 3.5s;
+			-webkit-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes type {
+			0% {
+				width: 0;
+			}
+
+			99.9% {
+				border-right: .10em solid black;
+			}
+
+			100% {
+				border: none;
+			}
+		}
+
+		@-webkit-keyframes type {
+			0% {
+				width: 0;
+			}
+
+			99.9% {
+				border-right: .10em solid black;
+			}
+
+			100% {
+				border: none;
+			}
+		}
+
+		@keyframes type2 {
+			0% {
+				width: 0;
+			}
+
+			1% {
+				opacity: 0.666;
+			}
+
+			99.9% {
+				border-right: .10em solid black;
+			}
+
+			100% {
+				opacity: 0.666;
+				border: none;
+			}
+		}
+
+		@-webkit-keyframes type2 {
+			0% {
+				width: 0;
+			}
+
+			1% {
+				opacity: 0.666;
+			}
+
+			99.9% {
+				border-right: .10em solid black;
+			}
+
+			100% {
+				opacity: 0.666;
+				border: none;
+			}
+		}
+
+		@keyframes type3 {
+			0% {
+				width: 0;
+			}
+
+			1% {
+				opacity: 0.666;
+			}
+
+			100% {
+				opacity: 0.666;
+			}
+		}
+
+		@-webkit-keyframes type3 {
+			0% {
+				width: 0;
+			}
+
+			1% {
+				opacity: 0.666;
+			}
+
+			100% {
+				opacity: 0.666;
+			}
+		}
+
+		@keyframes blink {
+			50% {
+				border-color: transparent;
+			}
+		}
+
+		@-webkit-keyframes blink {
+			50% {
+				border-color: tranparent;
+			}
+		}
 	</style>
+	<script src='https://kit.fontawesome.com/adf227c502.js' crossorigin='anonymous'></script>
 </head>
 
 <body>
@@ -56,10 +276,31 @@
 				<img src='avatar.jpg' class='avatar' alt='Hiro Narita' />
 				<div class='avatar-text-container'>
 					<h1>Hiro Narita</h1>
-					<h2>成田裕明</h2>
+					<h2 class='kanji'>成田裕明</h2>
 				</div>
 			</div>
+			<div class='icons-container'>
+				<a href='https://github.com/hironarita' class='no-style' target='_blank'>
+					<i class='fab fa-github-square fa-2x'></i>
+				</a>
+				<a href='https://www.linkedin.com/in/hironarita/' class='no-style' target='_blank'>
+					<i class='fab fa-linkedin fa-2x'></i>
+				</a>
+				<a href='https://steamcommunity.com/profiles/76561198242738572/' class='no-style' target='_blank'>
+					<i class='fab fa-steam-square fa-2x'></i>
+				</a>
+				<a href='https://twitter.com/hnaritanyc' class='no-style' target='_blank'>
+					<i class='fab fa-twitter-square fa-2x'></i>
+				</a>
+			</div>
 		</header>
+		<section>
+			<div class="css-typing">
+				<p>Software Developer</p>
+				<p>PC Gamer</p>
+				<p>Tonkatsu Connoisseur</p>
+			  </div>
+		</section>
 	</div>
 </body>
 
