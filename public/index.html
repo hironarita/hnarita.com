@@ -15,7 +15,7 @@
 		}
 
 		header {
-			margin: 0 0 150px;
+			margin: 0 0 120px;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -43,45 +43,6 @@
 
 		.icons-container {
 			display: flex;
-		}
-
-		.intro-text {
-			margin: 0 0 150px 0;
-			font-size: 32px;
-			line-height: 1.5625em;
-			opacity: 0.666;
-			max-width: 970px;
-			font-weight: 300;
-		}
-
-		@media all and (max-width: 425px) {
-			header {
-				display: block;
-				justify-content: center;
-			}
-
-			.avatar-container {
-				display: block;
-				text-align: center;
-			}
-
-			.avatar {
-				height: 100px;
-				width: 100px;
-			}
-
-			.icons-container {
-				margin-top: 10px;
-				justify-content: center;
-			}
-
-			.kanji {
-				display: none;
-			}
-
-			.intro-text {
-				font-size: 17px;
-			}
 		}
 
 		.fab {
@@ -131,7 +92,7 @@
 		}
 
 		.css-typing p:nth-child(1) {
-			width: 290px;
+			width: 330px;
 			-webkit-animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
 			animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
 			-webkit-animation-fill-mode: forwards;
@@ -139,7 +100,7 @@
 		}
 
 		.css-typing p:nth-child(2) {
-			width: 150px;
+			width: 200px;
 			opacity: 0;
 			-webkit-animation: type2 1.5s steps(40, end), blink .5s step-end infinite alternate;
 			animation: type2 1.5s steps(40, end), blink .5s step-end infinite alternate;
@@ -150,7 +111,7 @@
 		}
 
 		.css-typing p:nth-child(3) {
-			width: 320px;
+			width: 360px;
 			opacity: 0;
 			-webkit-animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
 			animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
@@ -265,6 +226,83 @@
 				border-color: tranparent;
 			}
 		}
+
+		.tag-primary {
+			background: #68b0f1;
+			color: #fff;
+			margin-bottom: 15px;
+		}
+
+		.tag {
+			font-size: 12px;
+			font-weight: 400;
+			padding: 5px 15px;
+			border-radius: 3px;
+			vertical-align: text-top;
+			display: inline-block;
+			white-space: nowrap;
+		}
+
+		@media all and (max-width: 425px) {
+			header {
+				display: block;
+				justify-content: center;
+			}
+
+			.avatar-container {
+				display: block;
+				text-align: center;
+			}
+
+			.avatar {
+				height: 100px;
+				width: 100px;
+			}
+
+			.icons-container {
+				margin-top: 10px;
+				justify-content: center;
+			}
+
+			.kanji {
+				display: none;
+			}
+
+			header {
+				margin: 0 0 60px;
+			}
+
+			.css-typing {
+				display: flex;
+				justify-content: center;
+			}
+
+			.css-typing p {
+				font-size: 20px;
+				margin: auto;
+			}
+
+			.css-typing p:nth-child(1) {
+				width: 210px;
+			}
+
+			.css-typing p:nth-child(2) {
+				width: 130px;
+			}
+
+			.css-typing p:nth-child(3) {
+				width: 225px;
+			}
+
+			.tag-primary {
+				align-self: center;
+			}
+		}
+
+		.fa-hand-point-right:hover {
+			transform: rotate(-30deg);
+			-webkit-transform: rotate(-30deg);
+		}
 	</style>
 	<script src='https://kit.fontawesome.com/adf227c502.js' crossorigin='anonymous'></script>
 </head>
@@ -294,12 +332,14 @@
 				</a>
 			</div>
 		</header>
-		<section>
+		<section class='intro-text-container'>
 			<div class="css-typing">
-				<p>Software Developer</p>
-				<p>PC Gamer</p>
-				<p>Tonkatsu Connoisseur</p>
-			  </div>
+				<div>
+					<p><i class="far fa-hand-point-right"></i> Software Developer</p>
+					<p><i class="far fa-hand-point-right"></i> PC Gamer</p>
+					<p><i class="far fa-hand-point-right"></i> Tonkatsu Connoisseur</p>
+				</div>
+			</div>
 		</section>
 	</div>
 </body>
