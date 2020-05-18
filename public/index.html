@@ -68,6 +68,13 @@
 			opacity: 0.535;
 		}
 
+		h4 {
+			font-size: 17px;
+			font-weight: 500;
+			opacity: 0.855;
+			margin: 0 0 8px;
+		}
+
 		a.no-style:link {
 			text-decoration: inherit;
 			color: inherit;
@@ -228,9 +235,8 @@
 		}
 
 		.tag-primary {
-			background: #68b0f1;
+			background: #5fc383;
 			color: #fff;
-			margin-bottom: 15px;
 		}
 
 		.tag {
@@ -241,12 +247,40 @@
 			vertical-align: text-top;
 			display: inline-block;
 			white-space: nowrap;
+			margin-bottom: 30px;
 		}
 
-		@media all and (max-width: 425px) {
+		.intro-text-container {
+			margin: 0 0 120px;
+		}
+
+		a.projects,
+		a.projects:active,
+		a.projects:visited,
+		a.projects:focus {
+			color: inherit;
+			text-decoration: none;
+			border-bottom: dashed 1px rgba(0, 0, 0, 0.4);
+			padding-bottom: 2px;
+			transition: border-bottom-color 500ms ease-in-out;
+		}
+
+		.projects-resume-text {
+			font-size: 17px;
+			opacity: 0.666;
+			margin-bottom: 13px;
+			line-height: 1.4em;
+		}
+
+		.kanban-lite {
+			width: 45%;
+		}
+
+		@media all and (max-width: 725px) {
 			header {
 				display: block;
 				justify-content: center;
+				margin: 0 0 60px;
 			}
 
 			.avatar-container {
@@ -266,10 +300,6 @@
 
 			.kanji {
 				display: none;
-			}
-
-			header {
-				margin: 0 0 60px;
 			}
 
 			.css-typing {
@@ -296,6 +326,18 @@
 
 			.tag-primary {
 				align-self: center;
+			}
+
+			.intro-text-container {
+				margin: 0 0 60px;
+			}
+
+			.kanban-lite {
+				width: 80%;
+			}
+
+			.personal-projects-container {
+				text-align: center;
 			}
 		}
 
@@ -333,12 +375,20 @@
 			</div>
 		</header>
 		<section class='intro-text-container'>
-			<div class="css-typing">
+			<div class='css-typing'>
 				<div>
 					<p><i class="far fa-hand-point-right"></i> Software Developer</p>
 					<p><i class="far fa-hand-point-right"></i> PC Gamer</p>
 					<p><i class="far fa-hand-point-right"></i> Tonkatsu Connoisseur</p>
 				</div>
+			</div>
+		</section>
+		<section class='personal-projects-container'>
+			<span class='tag tag-primary'>Personal Projects</span>
+			<div>
+				<a href='https://kanban-lite-hnarita.herokuapp.com/' target='_blank'>
+					<img src='kanban-lite.png' alt='Kanban Lite' class='kanban-lite' />
+				</a>
 			</div>
 		</section>
 	</div>
