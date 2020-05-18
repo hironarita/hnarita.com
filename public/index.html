@@ -12,6 +12,7 @@
 			padding-top: 150px;
 			color: #000;
 			min-width: 300px;
+			padding-bottom: 50px;
 		}
 
 		header {
@@ -73,6 +74,13 @@
 			font-weight: 500;
 			opacity: 0.855;
 			margin: 0 0 8px;
+		}
+
+		h5 {
+			font-size: 15px;
+			font-weight: 400;
+			opacity: 0.666;
+			margin: 0 0 28px;
 		}
 
 		a.no-style:link {
@@ -234,9 +242,15 @@
 			}
 		}
 
-		.tag-primary {
+		.tag-projects {
 			background: #5fc383;
 			color: #fff;
+			margin-top: 25px;
+		}
+
+		.tag-resume {
+			background: #68b0f1;
+			color: #fff;	
 		}
 
 		.tag {
@@ -254,18 +268,7 @@
 			margin: 0 0 120px;
 		}
 
-		a.projects,
-		a.projects:active,
-		a.projects:visited,
-		a.projects:focus {
-			color: inherit;
-			text-decoration: none;
-			border-bottom: dashed 1px rgba(0, 0, 0, 0.4);
-			padding-bottom: 2px;
-			transition: border-bottom-color 500ms ease-in-out;
-		}
-
-		.projects-resume-text {
+		.resume-text {
 			font-size: 17px;
 			opacity: 0.666;
 			margin-bottom: 13px;
@@ -277,6 +280,10 @@
 		}
 
 		@media all and (max-width: 725px) {
+			body {
+				padding-top: 30px;
+			}
+
 			header {
 				display: block;
 				justify-content: center;
@@ -336,8 +343,12 @@
 				width: 80%;
 			}
 
-			.personal-projects-container {
+			.resume-projects-container {
 				text-align: center;
+			}
+
+			.resume-text {
+				font-size: 14px;
 			}
 		}
 
@@ -383,8 +394,27 @@
 				</div>
 			</div>
 		</section>
-		<section class='personal-projects-container'>
-			<span class='tag tag-primary'>Personal Projects</span>
+		<section class='resume-projects-container'>
+			<span class='tag tag-resume'>Resume</span>
+			<div>
+				<h4>Web Developer</h4>
+				<h5>UpTop</h5>
+				<p class='resume-text'>• Implemented automated maintenance request ticket system using Twilio voice call
+					API.</p>
+				<p class='resume-text'>• Worked with the team to build out an accounting system into the landlord
+					portal.</p>
+				<p class='resume-text'>• Developed the React Native app for iOS and Android using Expo, TypeScript, and
+					Redux based off of wireframes from the UI/UX designer.</p>
+				<p class='resume-text'>• Built new features and continue to maintain the React Native app. Held full
+					control of releases to the development and production environments.</p>
+				<p class='resume-text'>• Built in new features to the API using C# and .NET framework.</p>
+				<p class='resume-text'>• Converted the web app from Knockout/CoffeeScript to React/TypeScript.
+					Implemented and configured Webpack.</p>
+				<p class='resume-text'>• Built out new features for both web apps – renter and landlord portals.</p>
+			</div>
+		</section>
+		<section class='resume-projects-container'>
+			<span class='tag tag-projects'>Personal Projects</span>
 			<div>
 				<a href='https://kanban-lite-hnarita.herokuapp.com/' target='_blank'>
 					<img src='kanban-lite.png' alt='Kanban Lite' class='kanban-lite' />
